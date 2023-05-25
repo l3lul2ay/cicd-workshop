@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh "docker build -t supaket/podinfo:${env.BUILD_NUMBER} ."
+        sh "docker build -t pralops/podinfo:${env.BUILD_NUMBER} ."
       }
     }
     stage('Test'){
@@ -24,13 +24,13 @@ pipeline {
   //     steps {
   //       withCredentials([usernamePassword(credentialsId: 'dockerhub', passwordVariable: 'dockerHubPassword', usernameVariable: 'dockerHubUser')]) {
   //         sh "docker login -u ${env.dockerHubUser} -p ${env.dockerHubPassword}"
-  //         sh "docker push supaket/podinfo:${env.BUILD_NUMBER}"
+  //         sh "docker push pralops/podinfo:${env.BUILD_NUMBER}"
   //       }
   //     }
   //   }
   //   stage('Docker Remove Image') {
   //     steps {
-  //       sh "docker rmi supaket/podinfo:${env.BUILD_NUMBER}"
+  //       sh "docker rmi pralops/podinfo:${env.BUILD_NUMBER}"
   //     }
   //   }
   //   stage('Deploy') {
