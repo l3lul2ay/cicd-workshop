@@ -11,4 +11,4 @@ spec:
   accessModes:
     - ReadWriteOnce
   hostPath:
-    path: /data/volume
+    path: C:\Users\PRALOPSUTIVAREE\Desktop\CICD\data\volume
